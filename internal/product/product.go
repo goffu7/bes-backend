@@ -177,7 +177,7 @@ func TransformOrders(input []InputOrder) []CleanedOrder {
 			}
 			cleanedOrder := CleanedOrder{
 				No:         productNo,
-				ProductId:  item[0] + item[1],
+				ProductId:  item[0] + "-" + item[1],
 				MaterialId: &newMaterialId,
 				ModelId:    &newModelId,
 				Qty:        newQty,
@@ -195,7 +195,7 @@ func TransformOrders(input []InputOrder) []CleanedOrder {
 	var nilString *string
 	wipingCloth := CleanedOrder{
 		No:         productNo,
-		ProductId:  "WIPING_CLOTH",
+		ProductId:  "WIPING-CLOTH",
 		MaterialId: nilString,
 		ModelId:    nilString,
 		Qty:        totalQty,
